@@ -1,7 +1,10 @@
 package com.Tohsaka.ecom;
 
 import com.Tohsaka.ecom.repositories.InventoryRepository;
+import com.Tohsaka.ecom.utils.DriverManager;
 import com.Tohsaka.ecom.utils.DriverUtils;
+import com.Tohsaka.ecom.utils.LoginUtil;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -12,15 +15,24 @@ import java.util.List;
 
 public class InventoryTest extends BaseTest {
 
-    @Test(enabled = false)
-    public void ProductDisplayTest(){
+    @Test()
+    public void ProductDisplayTest() throws InterruptedException {
+        DriverManager driverManager = new DriverManager();
+        WebDriver driver = driverManager.getDriver();
+        driver.get("https://www.saucedemo.com/v1/index.html");
+        LoginUtil.performLogin(driver);
+
         int expected = 6;
         int  actual = DriverUtils.getDriver().findElements(InventoryRepository.inventoryItem).size();
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(actual, expected, "Product Display Failed");
+        driverManager.quitDriver();
     }
 
     @Test
     public void ProductSortFeatureTest() throws InterruptedException {
+        DriverManager driverManager = new DriverManager();
+        WebDriver driver = driverManager.getDriver();
+        LoginUtil.performLogin(driver);
         Select select = new Select(DriverUtils.getDriver().findElement(
                 InventoryRepository.productSortContainer));
         select.selectByValue("az");
@@ -35,5 +47,6 @@ public class InventoryTest extends BaseTest {
         Collections.sort(expectedTitles);
 
         Assert.assertEquals(actualTitles, expectedTitles);
+        DriverUtils.quitDriver();
     }
 }

@@ -2,8 +2,6 @@ package com.Tohsaka.ecom.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-
 import java.time.Duration;
 
 public class DriverUtils {

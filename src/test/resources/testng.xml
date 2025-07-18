@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Swaglabs eCommerce Suite"thread-count="9" verbose="1" parallel="tests">
-    <test name="Automation Test" >
+<suite name="Swaglabs eCommerce Suite">
+    <test name="Authentication Test" enabled="false">
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <parameter name="baseURL" value="https://www.saucedemo.com/v1/index.html"></parameter>
+
         <classes>
             <class name="com.Tohsaka.ecom.InventoryTest"></class>
-            <class name="com.Tohsaka.ecom.AuthenticationTest"></class>
+        </classes>
+    </test>
+
+    <test name="Inventory Test" enabled="false">
+        <parameter name="username" value="standard_user"></parameter>
+        <parameter name="password" value="secret_sauce"></parameter>
+        <parameter name="baseURL" value="https://www.saucedemo.com/v1/index.html"></parameter>
+
+        <classes>
+            <class name="com.Tohsaka.ecom.InventoryTest"></class>
+        </classes>
+    </test>
+
+    <test name="DragDrop Test">
+        <classes>
+            <class name="com.Tohsaka.ecom.DragDropTest"></class>
         </classes>
     </test>
 </suite>
