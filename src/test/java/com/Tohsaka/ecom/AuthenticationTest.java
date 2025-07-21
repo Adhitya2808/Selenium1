@@ -4,7 +4,6 @@ import com.Tohsaka.ecom.utils.DriverUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +12,6 @@ public class AuthenticationTest {
     @Test(dataProvider ="logindataprovider",dataProviderClass = DataTestProvider.class)
     public void loginTest(String username, String password) throws InterruptedException {
         WebDriver driver = DriverUtils.getDriver();
-        driver.get("https://www.saucedemo.com/v1/index.html");
         WebElement InputUsername = driver.findElement(By.id("user-name"));
         InputUsername.sendKeys(username);
 
@@ -32,8 +30,7 @@ public class AuthenticationTest {
 
     @Test()
     public void loginInvalidUsernameTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/v1/index.html");
+        WebDriver driver = DriverUtils.getDriver();
 
         Thread.sleep(1000);
         WebElement InputUsername = driver.findElement(By.id("user-name"));
@@ -58,8 +55,7 @@ public class AuthenticationTest {
 
     @Test()
     public void loginInvalidPasswordTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/v1/index.html");
+        WebDriver driver = DriverUtils.getDriver();
 
         Thread.sleep(1000);
         WebElement InputUsername = driver.findElement(By.id("user-name"));
@@ -84,8 +80,7 @@ public class AuthenticationTest {
 
     @Test()
     public void loginWithoutPasswordTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/v1/index.html");
+        WebDriver driver = DriverUtils.getDriver();
 
         Thread.sleep(1000);
         WebElement InputUsername = driver.findElement(By.id("user-name"));
@@ -106,8 +101,7 @@ public class AuthenticationTest {
 
     @Test()
     public void loginWithoutUsernameTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.saucedemo.com/v1/index.html");
+        WebDriver driver = DriverUtils.getDriver();
 
         Thread.sleep(1000);
         WebElement InputPassword = driver.findElement(By.id("password"));
