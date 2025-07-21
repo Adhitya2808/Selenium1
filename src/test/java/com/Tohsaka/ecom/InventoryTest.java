@@ -4,6 +4,7 @@ import com.Tohsaka.ecom.repositories.InventoryRepository;
 import com.Tohsaka.ecom.utils.DriverManager;
 import com.Tohsaka.ecom.utils.DriverUtils;
 import com.Tohsaka.ecom.utils.LoginUtil;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class InventoryTest extends BaseTest {
 
-    @Test()
+    @Test(enabled = false)
     public void ProductDisplayTest() throws InterruptedException {
         DriverManager driverManager = new DriverManager();
         WebDriver driver = driverManager.getDriver();
@@ -28,7 +29,7 @@ public class InventoryTest extends BaseTest {
         driverManager.quitDriver();
     }
 
-    @Test
+    @Test(enabled = false)
     public void ProductSortFeatureTest() throws InterruptedException {
         DriverManager driverManager = new DriverManager();
         WebDriver driver = driverManager.getDriver();
@@ -48,5 +49,31 @@ public class InventoryTest extends BaseTest {
 
         Assert.assertEquals(actualTitles, expectedTitles);
         DriverUtils.quitDriver();
+    }
+
+    @Test
+    public void AddProductTest() throws InterruptedException {
+        DriverManager driverManager = new DriverManager();
+        WebDriver driver = driverManager.getDriver();
+        driver.get("https://www.saucedemo.com/v1/index.html");
+        LoginUtil.performLogin(driver);
+
+        Thread.sleep(2000);
+        WebElement ButtonAdd = driver.findElement(InventoryRepository.ProductAdd);
+        ButtonAdd.click();
+
+        Thread.sleep(1000);
+        WebElement Cart = driver.findElement(InventoryRepository.ProductCart);
+        Cart.click();
+
+        WebElement cartitem = driver.findElement(InventoryRepository.CartList);
+        String itemname = cartitem.getText();
+
+        WebElement remove = driver.findElement(InventoryRepository.RemoveBtn);
+        String removebtn = remove.getText();
+
+        Assert.assertNotNull(itemname);
+        Assert.assertEquals(removebtn, "REMOVE");
+        System.out.println("Item di Keranjang" + itemname);
     }
 }

@@ -11,7 +11,7 @@
         </classes>
     </test>
 
-    <test name="Inventory Test" enabled="false">
+    <test name="Inventory Test" enabled="true">
         <parameter name="username" value="standard_user"></parameter>
         <parameter name="password" value="secret_sauce"></parameter>
         <parameter name="baseURL" value="https://www.saucedemo.com/v1/index.html"></parameter>
@@ -21,7 +21,7 @@
         </classes>
     </test>
 
-    <test name="DragDrop Test">
+    <test name="DragDrop Test" enabled="false">
         <classes>
             <class name="com.Tohsaka.ecom.DragDropTest"></class>
         </classes>

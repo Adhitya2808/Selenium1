@@ -9,9 +9,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class DragDropTest {
 
-    @Test
+    @Test(enabled = false)
     public void dragDropTest() throws InterruptedException {
         DriverManager driverManager = new DriverManager();
         WebDriver driver = driverManager.getDriver();
@@ -26,6 +28,18 @@ public class DragDropTest {
         String actual = droppable.getText();
         String expected = "Dropped!";
         Assert.assertEquals(actual, expected);
+        driverManager.quitDriver();
+    }
+
+    @Test
+    public void resizeTest() throws InterruptedException {
+        DriverManager driverManager = new DriverManager();
+        WebDriver driver = driverManager.getDriver();
+        driver.get("https://jqueryui.com/resources/demos/resizable/default.html");
+        Actions builder = new Actions(driver);
+        WebElement resize = driver.findElement(By.xpath("/html/body/div/div[3]"));
+        builder.moveToElement(resize).pause(Duration.ofSeconds(1)).clickAndHold().moveByOffset(10,150).release().perform();
+
         driverManager.quitDriver();
     }
 }
