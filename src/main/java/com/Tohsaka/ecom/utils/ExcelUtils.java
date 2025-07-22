@@ -28,7 +28,7 @@ public class ExcelUtils {
         return sheet.getRow(0).getPhysicalNumberOfCells();
     }
 
-    public String getCellValue(int row, int col){
+    public String getCellData(int row, int col){
         DataFormatter formatter = new DataFormatter();
         return formatter.formatCellValue(sheet.getRow(row).getCell(col));
     }
