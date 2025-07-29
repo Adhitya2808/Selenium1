@@ -32,10 +32,10 @@ Module Inventory Test Case:
 
 ## 🛠️ System Requirements 🛠️
 
-- Java Version 17.0.12 atau diatasnya
-- Maven Version 3.9.0 atau diatasnya
+- Java Version 17.0.12 or above
+- Maven Version 3.9.0 or above
 - Selenium Version 4.34.0
-- Text Editor seperti Intellij IDEA atau VsCode
+- Text Editor like Intellij IDEA or VsCode
 - Browser(Chrome)
   
 [![My Skills](https://skillicons.dev/icons?i=java,maven,selenium,idea,vscode)](https://skillicons.dev)
