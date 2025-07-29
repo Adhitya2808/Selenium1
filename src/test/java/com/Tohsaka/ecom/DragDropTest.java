@@ -1,31 +1,43 @@
 package com.Tohsaka.ecom;
 
-import com.Tohsaka.ecom.repositories.JQueryDragDropRepository;
+import com.Tohsaka.ecom.pages.JQueryDragDropPage;
+import com.Tohsaka.ecom.pages.JQueryResizePage;
 import com.Tohsaka.ecom.utils.DriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class DragDropTest {
 
     @Test
-    public void dragDropTest() throws InterruptedException {
+    public void resizeTest() throws InterruptedException {
         DriverManager driverManager = new DriverManager();
         WebDriver driver = driverManager.getDriver();
-        driver.get("https://jquery-drag-drop-demo.webflow.io/");
+        driver.get("https://jqueryui.com/resources/demos/resizable/default.html");
 
-        Actions builder = new Actions(driver);
-        WebElement draggable = driver.findElement(JQueryDragDropRepository.draggable);
-        WebElement droppable = driver.findElement(JQueryDragDropRepository.droppable);
-        builder.dragAndDrop(draggable, droppable).perform();
+        JQueryDragDropPage dragDropPage = new JQueryDragDropPage(driver);
+        dragDropPage.dragAndDrop();
 
-        Thread.sleep(1000);
-        String actual = droppable.getText();
+        String actual = dragDropPage.getLabel();
         String expected = "Dropped!";
         Assert.assertEquals(actual, expected);
+        driverManager.quitDriver();
+    }
+
+    @Test
+    public void ResizeElementTest() throws InterruptedException {
+        DriverManager driverManager = new DriverManager();
+        WebDriver driver = driverManager.getDriver();
+        driver.get("https://jqueryui.com/resources/demos/resizable/default.html");
+
+        JQueryResizePage resizePage = new JQueryResizePage(driver);
+        resizePage.resizing();
+
+        String expected = "250px";
+
+        Assert.assertNotNull(resizePage.getHeight(), expected);
+        Assert.assertNotNull(resizePage.getWidth(), expected);
         driverManager.quitDriver();
     }
 }

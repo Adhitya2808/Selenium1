@@ -1,17 +1,15 @@
 package com.Tohsaka.ecom.utils;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import java.time.Duration;
 
+@Deprecated(since = "Provide driver manager.")
 public class DriverUtils {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
-            driver.manage().window().maximize();
+            DriverManager dm = new DriverManager();
+            driver = dm.getDriver();
         }
         return driver;
     }
