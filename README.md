@@ -5,21 +5,21 @@
 
 Project ini merupakan Automation testing menggunakan Selenium Webdriver dan TestNG untuk menguji fungsionalitas dari web E-Commerce [Swag Labs](https://www.saucedemo.com/v1/index.html). Fokus utama pada pengujian ini meliputi module:
 - Authentication: 
-    -Sign In Feature
+    - SignIn Feature
 - Inventory:
     - Sort Display Product (A to Z)
     - Add To Cart Product
     - Display Product
     
 Test Case Yang Akan Diuji pada project ini adalah:
-- Sign In With Valid Credential
-- Sign In With Invalid Username
-- Sign In With Invalid Password
-- Sign In With Blank Username
-- Sign In With Blank Password
+- SignIn With Valid Credential
+- SignIn With Invalid Username
+- SignIn With Invalid Password
+- SignIn With Blank Username
+- SignIn With Blank Password
+- Inventory Add To Cart Product
 - Inventory Display All Product
 - Inventory Display All Product With Sort (A to Z)
-- Inventory Add To Cart Product
 
 ## Overview TestCase
 Module Authentication Test Case:
