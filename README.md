@@ -15,7 +15,12 @@ Inventory Test Case:
 
 
 
-2. [Code Test untuk Fitur Add To Cart](https://github.com/Adhitya2808/Selenium1/tree/AddToCartTest)
 
-## Disclaimer!!
-Dikarenakan Kemungkinan Terdapat Fitur Baru Yang Akan dilakukan Test Kemungkinan tidak Akan Saya langsung gabungkan ke branch Main hingga semua fitur selesai dilakukan Test
+## System Requirements
+
+- Java Version 17.0.12 atau diatasnya
+- Maven Version 3.9.0 atau diatasnya
+- Text Editor seperti Intellij IDEA atau VsCode
+- Browser(Chrome)
+
+
