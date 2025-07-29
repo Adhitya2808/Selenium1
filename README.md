@@ -1,6 +1,16 @@
 # Tugas Praktikum Minggu Ke-3
 
+
+## Preview Test Case Project:
+
+Authentication Test Case:
+![](https://github.com/Adhitya2808/Tugas-Praktikum-Selenium/blob/master/src/Screenshoot/Authentication.png)
 1. [Link Excel Untuk TestCase](https://docs.google.com/spreadsheets/d/15EcrhqhNRiTcEkVhM1V8B5OEg8rsnUF6/edit?usp=sharing&ouid=109645276730628737767&rtpof=true&sd=true)
+
+
+
+
+
 2. [Code Test untuk Fitur Add To Cart](https://github.com/Adhitya2808/Selenium1/tree/AddToCartTest)
 
 ## Disclaimer!!
