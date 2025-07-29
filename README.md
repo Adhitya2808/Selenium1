@@ -1,7 +1,7 @@
 # Tugas Praktikum Minggu Ke-3
 
 
-## Preview Test Case Project:
+## 📚 Summary 📚
 
 Authentication Test Case:
 ![](https://github.com/Adhitya2808/Tugas-Praktikum-Selenium/blob/master/src/Screenshoot/Authentication.png)
@@ -16,7 +16,7 @@ Inventory Test Case:
 
 
 
-## System Requirements 🛠️
+## 🛠️ System Requirements 🛠️
 
 - Java Version 17.0.12 atau diatasnya
 - Maven Version 3.9.0 atau diatasnya
