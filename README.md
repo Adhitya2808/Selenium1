@@ -1,7 +1,7 @@
 # Tugas Praktikum Minggu Ke-3
 
 
-## 📖 Summary 📖
+## ✍🏻 Summary ✍🏻
 
 Authentication Test Case:
 ![](https://github.com/Adhitya2808/Tugas-Praktikum-Selenium/blob/master/src/Screenshoot/Authentication.png)
@@ -25,4 +25,15 @@ Inventory Test Case:
 - Browser(Chrome)
   
 [![My Skills](https://skillicons.dev/icons?i=java,maven,selenium,idea,vscode)](https://skillicons.dev)
+
+## ⚙️ Quick Installation ⚙️
+
+Please Clone This Project with the following Command below:
+'''
+gh repo clone Adhitya2808/Tugas-Praktikum-Selenium
+'''
+running test with the following Command below:
+'''
+mvn clean test
+'''
 
