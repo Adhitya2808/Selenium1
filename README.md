@@ -22,5 +22,5 @@ Inventory Test Case:
 - Maven Version 3.9.0 atau diatasnya
 - Text Editor seperti Intellij IDEA atau VsCode
 - Browser(Chrome)
-
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,wasm)](https://skillicons.dev)
 
