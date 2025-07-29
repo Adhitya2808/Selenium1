@@ -23,5 +23,5 @@ Inventory Test Case:
 - Text Editor seperti Intellij IDEA atau VsCode
 - Browser(Chrome)
   
-[![My Skills](https://skillicons.dev/icons?i=java,maven,idea,wasm)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,maven,idea,vscode)](https://skillicons.dev)
 
