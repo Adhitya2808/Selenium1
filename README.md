@@ -29,9 +29,11 @@ Inventory Test Case:
 ## ⚙️ Quick Installation ⚙️
 
 Please Clone This Project with the following Command below:
+
 '''
 gh repo clone Adhitya2808/Tugas-Praktikum-Selenium
 '''
+
 running test with the following Command below:
 '''
 mvn clean test
