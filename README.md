@@ -1,7 +1,7 @@
 # Tugas Praktikum Minggu Ke-3
 
 
-## 📚 Summary 📚
+## 📖 Summary 📖
 
 Authentication Test Case:
 ![](https://github.com/Adhitya2808/Tugas-Praktikum-Selenium/blob/master/src/Screenshoot/Authentication.png)
