@@ -16,7 +16,7 @@ Inventory Test Case:
 
 
 
-## System Requirements
+## System Requirements 🛠️
 
 - Java Version 17.0.12 atau diatasnya
 - Maven Version 3.9.0 atau diatasnya
