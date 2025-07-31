@@ -7,9 +7,9 @@ Project ini merupakan Automation testing menggunakan Selenium Webdriver dan Test
 - Authentication: 
     - SignIn Feature
 - Inventory:
-    - Sort Display Product (A to Z)
+    - Sort Display Products (A to Z)
     - Add To Cart Product
-    - Display Product
+    - Display All Products
     
 Test Case Yang Akan Diuji pada project ini adalah:
 - SignIn With Valid Credential
@@ -45,7 +45,7 @@ Module Inventory Test Case:
 Please Clone This Project with the following Command below:
 
 ```
-gh repo clone Adhitya2808/Tugas-Praktikum-Selenium
+gh repo clone AdhityaArd/Tugas-Praktikum-Selenium
 ```
 Running test with the following Command below:
 ```
